@@ -1,0 +1,73 @@
+openapi: 3.0.4
+info:
+  title: Trade Balance
+  description: >-
+    Trade Balance provides US international trade data including customs duties
+    and trade flow information from the Treasury Department.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/tradebalance:
+    get:
+      summary: Get Trade Balance
+      description: Get trade balance data
+      operationId: tradebalance
+      parameters:
+        - name: date
+          in: query
+          schema:
+            type: string
+          required: false
+          description: >-
+            Optional date in YYYY-MM format for historical lookup. Omit for
+            current data.
+          example: 2024-01
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  yearMonth: 2024-01
+                  year: 2024
+                  month: 1
+                  customsDuties: 8234567890
+                  updatedAt: '2024-02-01T00:00:00.000Z'
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
