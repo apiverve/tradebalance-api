@@ -220,8 +220,9 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient
 
 api = TradebalanceAPIClient("[YOUR_API_KEY]")
 
+query = { "date": "2024-01" }
+
 try:
-    query = { "date": "2024-01" }
     result = api.execute(query)
     print(result)
 finally:
