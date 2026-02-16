@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/tradebalance",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Trade Balance provides US international trade data including customs duties and trade flow information from the Treasury Department.",
   "main": "index.js",
   "types": "index.d.ts",
