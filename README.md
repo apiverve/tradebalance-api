@@ -1,6 +1,6 @@
 # [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 
-Trade Balance provides US international trade data including customs duties and trade flow information from the Treasury Department.
+Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.
 
 The Trade Balance API provides a simple, reliable way to integrate trade balance functionality into your applications. Built for developers who need production-ready trade balance capabilities without the complexity of building from scratch.
 
@@ -30,7 +30,11 @@ The Trade Balance API provides a simple, reliable way to integrate trade balance
 ```javascript
 async function callTradeBalanceAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/tradebalance', {
+        const params = new URLSearchParams({
+            date: '2023-06'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/tradebalance?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +54,7 @@ callTradeBalanceAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/tradebalance?param=value" \
+curl -X GET "https://api.apiverve.com/v1/tradebalance?date=2023-06" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +154,7 @@ go get github.com/apiverve/tradebalance-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +173,7 @@ go get github.com/apiverve/tradebalance-api/go
 The Trade Balance API is commonly used for:
 
 - **Web Applications** - Add trade balance features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with trade balance capabilities
 - **Data Pipelines** - Process and analyze data at scale
