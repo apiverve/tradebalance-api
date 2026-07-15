@@ -1,6 +1,6 @@
 # Trade Balance API
 
-Trade Balance provides US international trade data including customs duties and trade flow information from the Treasury Department.
+Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.
 
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
@@ -60,7 +60,7 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  date: "2024-01"
+  date: "2023-06"
 };
 
 api.execute(query, function (error, data) {
@@ -80,7 +80,7 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  date: "2024-01"
+  date: "2023-06"
 };
 
 api.execute(query)
@@ -101,7 +101,7 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  date: "2024-01"
+  date: "2023-06"
 };
 
     try {
