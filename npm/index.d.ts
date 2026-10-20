@@ -25,11 +25,18 @@ declare module '@apiverve/tradebalance' {
 
 
   interface TradeBalanceData {
-      yearMonth:     null | string;
-      year:          number | null;
-      month:         number | null;
-      customsDuties: number | null;
-      updatedAt:     Date | null;
+      yearMonth:        null | string;
+      year:             number | null;
+      month:            number | null;
+      exports:          number | null;
+      imports:          number | null;
+      balance:          number | null;
+      unit:             null | string;
+      exportsFormatted: null | string;
+      importsFormatted: null | string;
+      balanceFormatted: null | string;
+      tradeStatus:      null | string;
+      updatedAt:        Date | null;
   }
 
   export default class tradebalanceWrapper {

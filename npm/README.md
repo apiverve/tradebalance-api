@@ -2,12 +2,9 @@
 
 Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/tradebalance.svg)](https://www.npmjs.com/package/@apiverve/tradebalance)
 
-This is a Javascript Wrapper for the [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/tradebalance
 ## Configuration
 
 Before using the Trade Balance API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The Trade Balance API documentation is found here: [https://docs.apiverve.com/ref/tradebalance](https://docs.apiverve.com/ref/tradebalance?utm_source=npm&utm_medium=readme).
+The Trade Balance API documentation is found here: [https://docs.apiverve.com/ref/tradebalance](https://docs.apiverve.com/ref/tradebalance?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -122,11 +119,18 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "yearMonth": "2024-01",
-    "year": 2024,
-    "month": 1,
-    "customsDuties": 8234567890,
-    "updatedAt": "2024-02-01T00:00:00.000Z"
+    "yearMonth": "2026-07",
+    "year": 2026,
+    "month": 7,
+    "exports": 310723,
+    "imports": 399299,
+    "balance": -88576,
+    "unit": "millions_usd",
+    "exportsFormatted": "$310.72 billion",
+    "importsFormatted": "$399.30 billion",
+    "balanceFormatted": "-$88.58 billion",
+    "tradeStatus": "deficit",
+    "updatedAt": "2026-09-16T16:03:38.440Z"
   }
 }
 ```
@@ -135,7 +139,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -147,12 +151,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
