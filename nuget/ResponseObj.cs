@@ -41,8 +41,29 @@ namespace APIVerve.API.TradeBalance
         [JsonProperty("month")]
         public long? Month { get; set; }
 
-        [JsonProperty("customsDuties")]
-        public long? CustomsDuties { get; set; }
+        [JsonProperty("exports")]
+        public long? Exports { get; set; }
+
+        [JsonProperty("imports")]
+        public long? Imports { get; set; }
+
+        [JsonProperty("balance")]
+        public long? Balance { get; set; }
+
+        [JsonProperty("unit")]
+        public string Unit { get; set; }
+
+        [JsonProperty("exportsFormatted")]
+        public string ExportsFormatted { get; set; }
+
+        [JsonProperty("importsFormatted")]
+        public string ImportsFormatted { get; set; }
+
+        [JsonProperty("balanceFormatted")]
+        public string BalanceFormatted { get; set; }
+
+        [JsonProperty("tradeStatus")]
+        public string TradeStatus { get; set; }
 
         [JsonProperty("updatedAt")]
         public DateTimeOffset? UpdatedAt { get; set; }
