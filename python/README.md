@@ -1,13 +1,12 @@
 Trade Balance API
 ============
 
-Trade Balance provides US international trade data including customs duties and trade flow information from the Treasury Department.
+Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-tradebalance.svg)](https://pypi.org/project/apiverve-tradebalance/)
+
+This is a Python wrapper for the [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-tradebalance
 
 ## Configuration
 
-Before using the tradebalance API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Trade Balance API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -44,7 +43,7 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient
 # Initialize the client with your APIVerve API key
 api = TradebalanceAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 try:
     # Make the API call
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Trade Balance API documentation is found here: [https://docs.apiverve.com/ref/tradebalance](https://docs.apiverve.com/ref/tradebalance?utm_source=pypi&utm_medium=readme).
+The Trade Balance API documentation is found here: [https://docs.apiverve.com/ref/tradebalance](https://docs.apiverve.com/ref/tradebalance?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -82,7 +81,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 ```
 
 ###### Simple Request
@@ -102,11 +101,18 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "yearMonth": "2024-01",
-    "year": 2024,
-    "month": 1,
-    "customsDuties": 8234567890,
-    "updatedAt": "2024-02-01T00:00:00.000Z"
+    "yearMonth": "2026-07",
+    "year": 2026,
+    "month": 7,
+    "exports": 310723,
+    "imports": 399299,
+    "balance": -88576,
+    "unit": "millions_usd",
+    "exportsFormatted": "$310.72 billion",
+    "importsFormatted": "$399.30 billion",
+    "balanceFormatted": "-$88.58 billion",
+    "tradeStatus": "deficit",
+    "updatedAt": "2026-09-16T16:03:38.440Z"
   }
 }
 ```
@@ -124,7 +130,7 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient, TradebalanceA
 
 api = TradebalanceAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 try:
     result = api.execute(query)
@@ -145,7 +151,7 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient, TradebalanceA
 
 api = TradebalanceAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 try:
     result = api.execute(query)
@@ -179,7 +185,7 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_tradebalance.apiClient import TradebalanceAPIClient, TradebalanceAPIClientError
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 # Using context manager ensures proper cleanup
 with TradebalanceAPIClient("[YOUR_API_KEY]") as api:
@@ -205,7 +211,7 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient
 # Enable debug mode
 api = TradebalanceAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -220,7 +226,7 @@ from apiverve_tradebalance.apiClient import TradebalanceAPIClient
 
 api = TradebalanceAPIClient("[YOUR_API_KEY]")
 
-query = { "date": "2024-01" }
+query = { "date": "2023-06" }
 
 try:
     result = api.execute(query)
@@ -234,7 +240,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -245,12 +251,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
