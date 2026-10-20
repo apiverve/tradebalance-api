@@ -1,13 +1,13 @@
-# [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.
 
 The Trade Balance API provides a simple, reliable way to integrate trade balance functionality into your applications. Built for developers who need production-ready trade balance capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/tradebalance-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/tradebalance](https://docs.apiverve.com/ref/tradebalance)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,39 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Trade Balance API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "yearMonth": "2026-07",
+    "year": 2026,
+    "month": 7,
+    "exports": 310723,
+    "imports": 399299,
+    "balance": -88576,
+    "unit": "millions_usd",
+    "exportsFormatted": "$310.72 billion",
+    "importsFormatted": "$399.30 billion",
+    "balanceFormatted": "-$88.58 billion",
+    "tradeStatus": "deficit",
+    "updatedAt": "2026-09-16T16:03:38.440Z"
+  }
 }
 ```
 
@@ -203,7 +231,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Trade Balance API](https://apiverve.com/marketplace/tradebalance?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

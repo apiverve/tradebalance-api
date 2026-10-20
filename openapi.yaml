@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/tradebalance:
     get:
-      summary: Get Trade Balance
+      summary: Trade Balance
       description: Get trade balance data
       operationId: tradebalance
       parameters:
@@ -53,11 +53,18 @@ paths:
                 status: ok
                 error: null
                 data:
-                  yearMonth: 2024-01
-                  year: 2024
-                  month: 1
-                  customsDuties: 8234567890
-                  updatedAt: '2024-02-01T00:00:00.000Z'
+                  yearMonth: 2026-07
+                  year: 2026
+                  month: 7
+                  exports: 310723
+                  imports: 399299
+                  balance: -88576
+                  unit: millions_usd
+                  exportsFormatted: $310.72 billion
+                  importsFormatted: $399.30 billion
+                  balanceFormatted: -$88.58 billion
+                  tradeStatus: deficit
+                  updatedAt: '2026-09-16T16:03:38.440Z'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
