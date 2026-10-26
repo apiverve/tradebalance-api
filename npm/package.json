@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/tradebalance",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Trade Balance provides monthly US international trade data - exports, imports, and the resulting goods-and-services trade balance (deficit or surplus) on a Balance of Payments basis.",
   "main": "index.js",
   "types": "index.d.ts",
