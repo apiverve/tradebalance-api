@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Tradebalance::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ date: "2023-06" })
+    #   response = client.execute({ date: "2023-06", history: true, changes: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/tradebalance?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'date' => { type: 'string', required: false, format: 'date' } }
+      VALIDATION_RULES = { 'date' => { type: 'string', required: false, format: 'date' }, 'history' => { type: 'boolean', required: false }, 'changes' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
