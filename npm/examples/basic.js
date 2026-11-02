@@ -15,7 +15,9 @@ const api = new tradebalanceAPI({
 
 // Example query
 var query = {
-  date: "2023-06"
+  date: "2023-06",
+  history: false,
+  changes: false
 };
 
 // Make the API request using callback

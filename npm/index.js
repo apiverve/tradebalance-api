@@ -30,7 +30,7 @@ class tradebalanceWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/tradebalance';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"date":{"type":"string","required":false,"format":"date"}};
+        this.validationRules = {"date":{"type":"string","required":false,"format":"date"},"history":{"type":"boolean","required":false,"default":false},"changes":{"type":"boolean","required":false,"default":false}};
     }
 
     /**
