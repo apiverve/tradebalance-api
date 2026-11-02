@@ -67,6 +67,57 @@ namespace APIVerve.API.TradeBalance
 
         [JsonProperty("updatedAt")]
         public DateTimeOffset? UpdatedAt { get; set; }
+
+        [JsonProperty("previousYearMonth")]
+        public string PreviousYearMonth { get; set; }
+
+        [JsonProperty("previousBalance")]
+        public long? PreviousBalance { get; set; }
+
+        [JsonProperty("exportsChange1m")]
+        public double? ExportsChange1M { get; set; }
+
+        [JsonProperty("importsChange1m")]
+        public double? ImportsChange1M { get; set; }
+
+        [JsonProperty("balanceChange1m")]
+        public long? BalanceChange1M { get; set; }
+
+        [JsonProperty("exportsChange12m")]
+        public double? ExportsChange12M { get; set; }
+
+        [JsonProperty("importsChange12m")]
+        public double? ImportsChange12M { get; set; }
+
+        [JsonProperty("balanceChange12m")]
+        public long? BalanceChange12M { get; set; }
+
+        [JsonProperty("exports12m")]
+        public long? Exports12M { get; set; }
+
+        [JsonProperty("imports12m")]
+        public long? Imports12M { get; set; }
+
+        [JsonProperty("balance12m")]
+        public long? Balance12M { get; set; }
+
+        [JsonProperty("history")]
+        public History[] History { get; set; }
+    }
+
+    public partial class History
+    {
+        [JsonProperty("yearMonth")]
+        public string YearMonth { get; set; }
+
+        [JsonProperty("exports")]
+        public long? Exports { get; set; }
+
+        [JsonProperty("imports")]
+        public long? Imports { get; set; }
+
+        [JsonProperty("balance")]
+        public long? Balance { get; set; }
     }
 
     public partial class Premium

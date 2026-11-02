@@ -15,5 +15,17 @@ namespace APIVerve.API.TradeBalance
         /// </summary>
         [JsonProperty("date")]
         public string Date { get; set; }
+
+        /// <summary>
+        /// Include the 12 monthly readings ending at the returned month
+        /// </summary>
+        [JsonProperty("history")]
+        public bool? History { get; set; }
+
+        /// <summary>
+        /// Include the previous month's balance, month-on-month and year-on-year changes and rolling 12-month totals
+        /// </summary>
+        [JsonProperty("changes")]
+        public bool? Changes { get; set; }
     }
 }

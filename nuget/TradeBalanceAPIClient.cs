@@ -67,7 +67,9 @@ namespace APIVerve.API.TradeBalance
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "date", new ValidationRule { Type = "string", Required = false, Format = "date" } }
+            { "date", new ValidationRule { Type = "string", Required = false, Format = "date" } },
+            { "history", new ValidationRule { Type = "boolean", Required = false } },
+            { "changes", new ValidationRule { Type = "boolean", Required = false } }
         };
 
         /// <summary>Format validation patterns</summary>
