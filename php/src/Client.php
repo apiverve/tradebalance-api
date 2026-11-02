@@ -15,7 +15,7 @@ use APIVerve\Tradebalance\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['date' => '2023-06']);
+ * $response = $client->execute(['date' => '2023-06', 'history' => true, 'changes' => true]);
  * print_r($response);
  * ```
  *
@@ -34,7 +34,9 @@ class Client
      * Validation rules for parameters
      */
     private const VALIDATION_RULES = [
-        'date' => ['type' => 'string', 'required' => false, 'format' => 'date']
+        'date' => ['type' => 'string', 'required' => false, 'format' => 'date'],
+        'history' => ['type' => 'boolean', 'required' => false],
+        'changes' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**
